@@ -1,0 +1,169 @@
+<md-toolbar layout="row" class="md-accent">
+    <div class="md-toolbar-tools">
+        <h1 layout-align-gt-sm="center">
+            Step 1 of 3
+        </h1>
+    </div>
+</md-toolbar>
+
+
+<div layout="row" flex class="change-my-css">
+
+    <md-content layout="column" id="content" flex class="md-padding">
+
+        <div layout="row" layout-wrap flex="90">
+            <div flex="10">
+            </div>
+
+
+            <div flex="80">
+                <md-card>
+                    <md-card-content>
+                        <form name="projectForm" enctype="multipart/form-data"
+                              action="http://localhost:7000/registrar/profiles/" method="post">
+
+
+                            <p class="input-label-visa">
+                                Full Name
+                            </p>
+                            <input class="visabox" flex="100" type="text" ng-model="project.full_name">
+
+                            <p class="input-label-visa">
+                                Email
+                            </p>
+                            <input class="visabox" flex="100" type="text" ng-model="project.email">
+
+                            <p class="input-label-visa">
+                                Mobile
+                            </p>
+                            <input class="visabox" flex="100" type="number" ng-model="project.mobile_phone">
+
+
+                            <!--
+                                                        <md-input-container class="md-block visabox">
+                                                            <label>Full Name</label>
+                                                            <input required
+                                                                   name="full_name"
+                                                                   ng-model="project.full_name">
+                                                            <div ng-messages="projectForm.clientName.$error">
+                                                                <div ng-message="required">This is required.</div>
+                                                            </div>
+                                                        </md-input-container>
+
+                                                        <md-input-container class="md-block visabox">
+                                                            <label>Email</label>
+                                                            <input required type="email"
+                                                                   name="email"
+                                                                   ng-model="project.email"
+                                                                   minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
+
+                                                            <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                                                                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                                                    You must enter a valid email address.
+                                                                </div>
+                                                            </div>
+                                                        </md-input-container>
+
+                                                        <md-input-container class="md-block visabox">
+                                                            <label>Mobile</label>
+                                                            <input required type="number" step="any"
+                                                                   name="mobile_phone"
+                                                                   ng-model="project.mobile_phone"/>
+                                                            <div ng-messages="projectForm.rate.$error" multiple md-auto-hide="false">
+                                                                <div ng-message="required">
+                                                                    This is required.
+                                                                </div>
+                                                            </div>
+                                                        </md-input-container>
+                            -->
+
+
+                            <md-input-container class="md-block " id="container_1">
+
+
+                            </md-input-container>
+
+
+                            <p layout-align="center center" style="margin-right: 15px">
+                                <md-button class="md-raised md-accent md-hue-2 bordered" layout="row" style="width: 100%"
+                                           layout-align="center center" ng-click="uploadFileClick('photo_1')" id="photo_1_btn">
+                                    <span class="material-icons">add_a_photo</span>
+                                    &nbsp; Upload Photo 1
+                                </md-button>
+
+
+                                <input class="inputfile" required type="file"
+                                       name="photo_1"
+                                       ng-model="project.photo_1" onchange="scanTheFile('photo_1')"/>
+                                <label for="file1">upload file</label>
+
+
+                                <img src="" height="100" alt="" id="photo_1" ng-hide="true">
+                            </p>
+
+
+                            <p layout-align="center center" style="margin-right: 15px">
+
+                                <md-button class="md-raised md-accent md-hue-2 bordered" layout="row" style="width: 100%"
+                                           layout-align="center center" ng-click="uploadFileClick('photo_2')" id="photo_2_btn">
+                                    <span class="material-icons">add_a_photo</span>
+                                    &nbsp; Upload Photo 2
+                                </md-button>
+
+
+                                <input class="inputfile" required type="file"
+                                       name="photo_2"
+                                       ng-model="project.photo_2" onchange="scanTheFile('photo_2')" />
+                                <label for="file1">upload file</label>
+
+
+                                <img src="" height="100" alt="" id="photo_2" ng-hide="true">
+                            </p>
+
+
+                            <p layout-align="center center" style="margin-right: 15px">
+                                <md-button class="md-raised md-accent md-hue-2 bordered" layout="row" style="width: 100%"
+                                           layout-align="center center" ng-click="uploadFileClick('photo_3')" id="photo_3_btn">
+                                    <span class="material-icons">add_a_photo</span>
+                                    &nbsp; Upload Photo 3
+                                </md-button>
+
+                                <input class="inputfile" required type="file"
+                                       name="photo_3"
+                                       ng-model="project.photo_3" onchange="scanTheFile('photo_3')"/>
+                                <label for="file1">upload file</label>
+
+                                <img src="" height="100" alt="" id="photo_3" ng-hide="true">
+                            </p>
+
+
+                            <br>
+
+
+                        </form>
+                    </md-card-content>
+
+                </md-card>
+
+
+            </div>
+
+        </div>
+
+
+    </md-content>
+</div>
+
+
+<md-toolbar class="md-accent md-hue-1">
+    <div class="md-toolbar-tools" layout="row" layout-align="end center">
+
+        <md-button type="submit" layout="row" layout-align="center center"
+                   ng-disabled="project.full_name == '' || project.email == '' || project.mobile_phone == ''"
+                   ng-click="storeValuesPage1()" class="md-primary"
+                   href="#!/view2">
+            Next <span class="material-icons big-icon">keyboard_arrow_right</span>
+        </md-button>
+
+    </div>
+</md-toolbar>

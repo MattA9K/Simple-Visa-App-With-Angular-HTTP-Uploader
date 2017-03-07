@@ -1,0 +1,39 @@
+.inputfile {
+
+    outline: 1px dotted #000 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+
+    font-size: 1.25em !important;
+    font-weight: 700 !important;
+    color: white !important;
+    background-color: black !important;
+    display: inline-block !important;
+
+    width: 0.1px !important;
+    height: 0.1px !important;
+    opacity: 0.0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    z-index: -1 !important;
+}
+
+.inputfile:focus {
+    outline: 1px dotted #000 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+
+    font-size: 1.25em !important;
+    font-weight: 700 !important;
+    color: white !important;
+    background-color: black !important;
+    display: inline-block !important;
+}
+
+.big-icon {
+    font-weight: 100;
+    transform: scale(1, 2.2);
+    -webkit-transform: scale(1, 2.2); /* Safari and Chrome */
+    -moz-transform: scale(1, 2.2); /* Firefox */
+    -ms-transform: scale(1, 2.2); /* IE 9+ */
+    -o-transform: scale(1, 2.2); /* Opera */
+    font-size: 450% !important;
+}

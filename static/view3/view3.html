@@ -1,0 +1,85 @@
+<md-toolbar layout="row" class="md-accent">
+    <div class="md-toolbar-tools">
+        <h1 layout-align-gt-sm="center">
+            Step 3 of 3
+        </h1>
+    </div>
+</md-toolbar>
+
+
+<div layout="row" flex class="change-my-css">
+
+    <md-content layout="column" id="content" flex class="md-padding">
+
+        <div layout="row" layout-wrap flex="90">
+            <div flex="10">
+
+            </div>
+
+
+            <div flex="80">
+
+                <md-card>
+                    <md-card-content>
+                        <form name="projectForm">
+
+
+                            <p class="input-label-visa">Remarks</p>
+                            <textarea class="visabox2" rows="5" cols="20" ng-model="form.remarks"></textarea>
+
+
+
+                            <md-input-container class="md-block" ng-hide="show_password == true">
+
+                                <md-checkbox ng-model="form.chk1" aria-label="Checkbox 1">
+                                    I agree to the terms
+                                </md-checkbox>
+                            </md-input-container>
+
+
+                            <md-input-container class="md-block">
+                                <md-checkbox ng-model="form.chk2" aria-label="Checkbox 1">
+                                    I approve this transaction
+                                </md-checkbox>
+                            </md-input-container>
+
+                            <!--
+                            <br>
+                            <div layout="row" layout-align="end center">
+                                <md-button ng-disabled="form.chk1 == false || form.chk2 == false"
+                                           href="#!/view4" type="submit" class="md-primary md-raised"
+                                           layout="row" layout-align="center center" ng-click="storeValuesPage3()">
+
+                                    Submit <span class="material-icons">keyboard_arrow_right</span>
+                                </md-button>
+                            </div>
+                            -->
+                        </form>
+                    </md-card-content>
+                </md-card>
+
+
+            </div>
+            <div flex="10">
+
+            </div>
+        </div>
+
+
+    </md-content>
+</div>
+
+
+
+<md-toolbar class="md-accent md-hue-1">
+    <div class="md-toolbar-tools" layout="row" layout-align="end center">
+
+        <md-button type="submit" layout="row" layout-align="center center"
+                   ng-disabled="project.full_name == '' || project.email == '' || project.mobile_phone == ''"
+                   ng-click="storeValuesPage3()" class="md-primary"
+                   href="#!/view4">
+            Next <span class="material-icons big-icon">keyboard_arrow_right</span>
+        </md-button>
+
+    </div>
+</md-toolbar>

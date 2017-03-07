@@ -18,6 +18,7 @@ from django.contrib import admin
 from registrar import views
 
 urlpatterns = [
+    url(r'^docs/', include('rest_framework_docs.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^registrar/', include('registrar.urls')),
     url(r'^$', views.index),
